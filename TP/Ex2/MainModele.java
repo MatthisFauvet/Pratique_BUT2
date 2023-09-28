@@ -21,6 +21,7 @@ public class MainModele {
                 PreparedStatement req = conx.prepareStatement("SELECT nomPays, SUM(pointsVote) AS total_points FROM VoteFa JOIN PaysFa ON VoteFa.Competiteur = PaysFa.idPays GROUP BY Competiteur ORDER BY total_points DESC;");
                 try {
                     ResultSet res = req.executeQuery();
+                    req.close();
                     conx.close();
                     return res;
                 } catch(SQLException e){
