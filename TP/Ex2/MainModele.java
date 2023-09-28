@@ -7,7 +7,7 @@ public class MainModele {
         
     }
 
-    public ResultSet getData(){
+    public static ResultSet getData(){
         try{
             Class.forName("org.mariadb.jdbc.Driver");
         } catch(ClassNotFoundException e) {
