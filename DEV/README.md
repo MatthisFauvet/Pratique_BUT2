@@ -24,7 +24,7 @@ _VoteFA_
 
 #### Creation des tables
 
-> ![WARNINGS]
+> [!WARNING]
 > N'ayant pas respecter certaines consignes de bases lors de la création de mon côté, il n'est pas impossible qu'il faille, de votre côté, modifier les requêtes dans les différentes class en Java. Ce pourrait être simplement des majuscules à supprimer.  
 
 ```SQL
