@@ -4,17 +4,15 @@ public class MainModele {
     final static int BADREQUEST = 0;
     
     public MainModele(){
-        
-    }
-
-    public static ResultSet getData(){
         try{
             Class.forName("org.mariadb.jdbc.Driver");
         } catch(ClassNotFoundException e) {
             System.out.println("Tu as oublié le CP grosse nouille");
             System.exit(1);
         }
+    }
 
+    public ResultSet getData(){
         try{
             Connection conx = DriverManager.getConnection("jdbc:mariadb://dwarves.iut-fbleau.fr/fauvet", "fauvet", "94AmhmE8");
             try{ 

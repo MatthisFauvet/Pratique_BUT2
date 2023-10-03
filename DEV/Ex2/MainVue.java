@@ -9,7 +9,7 @@ public class MainVue {
     private JPanel pannelCenter;
     private JPanel pannelBottom;
     
-    public MainVue(){
+    public MainVue(MainModele model){
         JFrame view = new JFrame("Points");
         view.setSize(500, 500);
         view.setLocation(710, 290);
@@ -26,7 +26,7 @@ public class MainVue {
 
         JButton button = new JButton("Refresh");
         
-        ViewControler viewController = new ViewControler(this); 
+        ViewControler viewController = new ViewControler(this, model); 
         button.addActionListener(viewController);
         
         this.pannelTop.add(this.labelCountry);

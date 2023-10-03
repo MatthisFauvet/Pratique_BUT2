@@ -2,8 +2,10 @@ import java.sql.*;
 
 public class Main {
     public static void main(String[] Args){
-        ResultSet result = MainModele.getData();
-        MainVue view = new MainVue();
+        MainModele model = new MainModele();
+        ResultSet result = model.getData();
+
+        MainVue view = new MainVue(model);
 
         if(result!=null){
             try {

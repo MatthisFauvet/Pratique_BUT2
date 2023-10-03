@@ -5,16 +5,18 @@ import java.sql.*;
 public class ViewControler implements ActionListener{
 
     MainVue view;
+    MainModele model;
     
-    public ViewControler(MainVue viewArgs) {
+    public ViewControler(MainVue viewArgs, MainModele argModel) {
         this.view = viewArgs;
+        this.model = argModel;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         this.view.refresh();
 
-        ResultSet result = MainModele.getData();
+        ResultSet result = this.model.getData();
 
         if(result!=null){
             try {
