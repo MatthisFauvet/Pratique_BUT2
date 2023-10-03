@@ -53,7 +53,7 @@ public class MainVue {
     }
 
     public void refresh(){
-        this.labelCountry.revalidate();
-        this.labelPoints.revalidate();
+        this.labelCountry.repaint();
+        this.labelPoints.repaint();
     }
 }
